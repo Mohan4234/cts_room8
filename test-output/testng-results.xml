@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="3" ignored="0" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="139542" started-at="2020-03-26T11:11:06Z" finished-at="2020-03-26T11:13:25Z">
+  <suite name="Default suite" duration-ms="118839" started-at="2020-03-29T16:53:17Z" finished-at="2020-03-29T16:55:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="139542" started-at="2020-03-26T11:11:06Z" finished-at="2020-03-26T11:13:25Z">
+    <test name="Default test" duration-ms="118839" started-at="2020-03-29T16:53:17Z" finished-at="2020-03-29T16:55:16Z">
       <class name="Tests.Test_Jpet">
-        <test-method status="PASS" signature="bfc()[pri:0, instance:Tests.Test_Jpet@204f30ec]" name="bfc" is-config="true" duration-ms="5519" started-at="2020-03-26T11:11:06Z" finished-at="2020-03-26T11:11:11Z">
+        <test-method status="PASS" signature="beforeclass()[pri:0, instance:Tests.Test_Jpet@204f30ec]" name="beforeclass" is-config="true" duration-ms="1042" started-at="2020-03-29T16:53:17Z" finished-at="2020-03-29T16:53:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bfc -->
-        <test-method status="PASS" signature="bfm()[pri:0, instance:Tests.Test_Jpet@204f30ec]" name="bfm" is-config="true" duration-ms="54184" started-at="2020-03-26T11:11:11Z" finished-at="2020-03-26T11:12:05Z">
+        </test-method> <!-- beforeclass -->
+        <test-method status="PASS" signature="beforemethod()[pri:0, instance:Tests.Test_Jpet@204f30ec]" name="beforemethod" is-config="true" duration-ms="28227" started-at="2020-03-29T16:53:18Z" finished-at="2020-03-29T16:53:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bfm -->
-        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.Test_Jpet@204f30ec]" name="f" duration-ms="26240" started-at="2020-03-26T11:12:05Z" data-provider="loginpage" finished-at="2020-03-26T11:12:32Z">
+        </test-method> <!-- beforemethod -->
+        <test-method status="FAIL" signature="Register_login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.Test_Jpet@204f30ec]" name="Register_login" duration-ms="31169" started-at="2020-03-29T16:53:46Z" data-provider="loginpage" finished-at="2020-03-29T16:54:18Z">
           <params>
             <param index="0">
               <value>
@@ -93,14 +93,81 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div[2]/div/a[2]"}
+  (Session info: chrome=80.0.3987.149)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-JAK61DA', ip: '192.168.43.182', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\Hp\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:64814}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f8ca84bf74379aa926fec44b66c38c4d
+*** Element info: {Using=xpath, value=/html/body/div[1]/div[2]/div/a[2]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div[2]/div/a[2]"}
+  (Session info: chrome=80.0.3987.149)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-JAK61DA', ip: '192.168.43.182', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.149, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\Hp\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:64814}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f8ca84bf74379aa926fec44b66c38c4d
+*** Element info: {Using=xpath, value=/html/body/div[1]/div[2]/div/a[2]}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at Pages.Login_page.sign(Login_page.java:24)
+at Pages.Login_page.Login(Login_page.java:52)
+at Tests.Test_Jpet.Register_login(Test_Jpet.java:82)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="PASS" signature="bfm()[pri:0, instance:Tests.Test_Jpet@204f30ec]" name="bfm" is-config="true" duration-ms="36177" started-at="2020-03-26T11:12:32Z" finished-at="2020-03-26T11:13:08Z">
+        </test-method> <!-- Register_login -->
+        <test-method status="PASS" signature="beforemethod()[pri:0, instance:Tests.Test_Jpet@204f30ec]" name="beforemethod" is-config="true" duration-ms="15714" started-at="2020-03-29T16:54:18Z" finished-at="2020-03-29T16:54:33Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bfm -->
-        <test-method status="FAIL" signature="login_secenario()[pri:4, instance:Tests.Test_Jpet@204f30ec]" name="login_secenario" duration-ms="17239" started-at="2020-03-26T11:13:08Z" finished-at="2020-03-26T11:13:25Z">
+        </test-method> <!-- beforemethod -->
+        <test-method status="FAIL" signature="search_secenario()[pri:2, instance:Tests.Test_Jpet@204f30ec]" name="search_secenario" duration-ms="9733" started-at="2020-03-29T16:54:33Z" finished-at="2020-03-29T16:54:43Z">
           <exception class="java.io.IOException">
             <message>
               <![CDATA[Destination 'C:\Users\Hp\eclipse-workspace\JPET\Screenshot' exists but is a directory]]>
@@ -111,7 +178,7 @@ at org.apache.commons.io.FileUtils.doCopyFile(FileUtils.java:1118)
 at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:1076)
 at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:1028)
 at BASECLASS.Screenshot.Take_screenshot(Screenshot.java:25)
-at Tests.Test_Jpet.login_secenario(Test_Jpet.java:90)
+at Tests.Test_Jpet.search_secenario(Test_Jpet.java:97)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -142,7 +209,49 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.io.IOException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login_secenario -->
+        </test-method> <!-- search_secenario -->
+        <test-method status="PASS" signature="beforemethod()[pri:0, instance:Tests.Test_Jpet@204f30ec]" name="beforemethod" is-config="true" duration-ms="21302" started-at="2020-03-29T16:54:43Z" finished-at="2020-03-29T16:55:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforemethod -->
+        <test-method status="FAIL" signature="adding_product()[pri:3, instance:Tests.Test_Jpet@204f30ec]" name="adding_product" duration-ms="11557" started-at="2020-03-29T16:55:04Z" finished-at="2020-03-29T16:55:16Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at Pages.product_in_cart.adding(product_in_cart.java:23)
+at Pages.product_in_cart.placing_order(product_in_cart.java:70)
+at Tests.Test_Jpet.adding_product(Test_Jpet.java:110)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- adding_product -->
       </class> <!-- Tests.Test_Jpet -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

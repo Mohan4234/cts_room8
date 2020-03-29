@@ -14,10 +14,12 @@ import BASECLASS.Screenshot;
 import BASECLASS.Utilities;
 import Excel_utilities.Read_excel;
 
+
 import Pages.Add_to_cart;
 import Pages.Login_page;
 import Pages.Register_page;
 import Pages.Search_page;
+import Pages.product_in_cart;
 
 
 
@@ -26,16 +28,17 @@ public class Test_Jpet extends Read_excel {
 	Utilities ult;
 
 	
-	Register_page Rp;
-	Login_page Lp;
-	Search_page sp;
-	Add_to_cart ac;
-	Screenshot ss;
+	Register_page Register;
+	Login_page Login;
+	Search_page search;
+	Add_to_cart addcart;
+	product_in_cart productincart;
+	Screenshot screenshot;
 	
 	
 	
 	@BeforeClass
-	public void bfc() 
+	public void beforeclass() 
 	{
 		ult=new Utilities(driver);
 		get_data();
@@ -43,52 +46,71 @@ public class Test_Jpet extends Read_excel {
 		
 	}
 	@BeforeMethod
-	public void bfm() 
+	public void beforemethod() 
 	{
 		//passing url and browser to base class function
 		driver=ult.Launch_browser("CHROME", "https://jpetstore.cfapps.io/catalog");
 		//creating a object to the register function
-		Rp=new Register_page(driver);
+		Register=new Register_page(driver);
 		
 		
 		//creating a object to the login function
-			Lp=new Login_page(driver);
+			Login=new Login_page(driver);
 			//creating a object to the search function
-		sp=new Search_page(driver);
+		search=new Search_page(driver);
 		//ceating a object to the addcart function
-		ac=new Add_to_cart(driver);
-	
+		addcart=new Add_to_cart(driver);
+		//creating a  object to products in cart function
+		productincart=new product_in_cart();
 		//creating a object to the screenshot function
-		ss=new Screenshot(driver);
+		screenshot=new Screenshot(driver);
 	}
   
 @Test(dataProvider="loginpage")
-  public void f(String un,String pd,String cpd,String nm,String ln,String eml,String ph,String a1,String a2,String ct,String st,String zp,String ctr,String uid,String pwd) throws IOException 
+  public void Register_login(String un,String pd,String cpd,String nm,String ln,String eml,String ph,String a1,String a2,String ct,String st,String zp,String ctr,String uid,String pwd) throws IOException 
   {
 	  
 	  String phn=ph.substring(1, 10);
 	  String zpc=zp.substring(1, 6);
 	  //calling register function
-	  Rp.do_reg(un,pd,cpd,nm,ln,eml,phn,a1,a2,ct,st,zpc,ctr);
+	  Register.do_reg(un,pd,cpd,nm,ln,eml,phn,a1,a2,ct,st,zpc,ctr);
   
 	 
 	  
 	  
 	 //calling login function 
-	 String s= Lp.Login(uid,pwd);
+	 String s= Login.Login(uid,pwd);
 	 Assert.assertTrue(s.contains("Demo"));
+	 driver.quit();
 	 
 	  
   }
-	  @Test(priority=4)
-	  public void login_secenario() throws IOException {
+	  @Test(priority=2)
+	  public void search_secenario() throws IOException {
 	  //calling searching function
-		  sp.search();
+		  Login.Login("giri","babuyadav");
+		  //calling searching function
+		  search.search();
+		  //calling adda_product function
+		  addcart.add_product(); 
+		  //calling screenshot function
+		  screenshot.Take_screenshot();
+		  driver.quit();
+		  
+	  }
 		  //calling add cart function
-	  ac.add_product();
-	  //calling screen shot function
-	  ss.Take_screenshot();
+	
+	  @Test(priority=3) public void adding_product() throws IOException { 
+		  String expected="Thank you, your order has been submitted.";
+	  Login.Login("giri","babuyadav"); 
+	  search.search(); 
+	  //calling add_product function
+	  addcart.add_product(); 
+	  //calling placing_order class
+	   String Actuals= productincart.placing_order();
+	  Assert.assertEquals(Actuals, expected);
 	  
+	 
 	  
   }
   @DataProvider(name="loginpage")
@@ -97,5 +119,6 @@ public class Test_Jpet extends Read_excel {
 	  //reading a data from excel
 	  return testdata;
   }
+  
   
 }
