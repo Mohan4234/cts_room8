@@ -12,9 +12,7 @@ import org.testng.annotations.Test;
 
 import BASECLASS.Screenshot;
 import BASECLASS.Utilities;
-import Excel_utilities.Read_excel;
-
-
+import Excel.Read_excel;
 import Pages.Add_to_cart;
 import Pages.Login_page;
 import Pages.Register_page;
